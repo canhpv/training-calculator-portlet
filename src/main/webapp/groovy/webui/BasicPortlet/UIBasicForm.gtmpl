@@ -1,0 +1,130 @@
+  <%
+        /**
+         * Created by The eXo Platform SAS
+         * Author : eXoPlatform
+         *          canhpv@exoplatform.com
+         * Sep 17, 2012
+         */
+    %>
+<script>    
+
+ function getRestServicesExample1()
+ {
+   var url = "http://localhost:8080/ecmdemo/rest-ecmdemo/testservice/helloworld/";  
+   
+var client = new XMLHttpRequest();
+ client.open("GET", url, false);
+ client.setRequestHeader("Content-Type", "text/plain");
+ client.send(url);
+if (client.status == 200)
+    alert( client.responseText)
+else
+    alert( client.status + " " + client.statusText + ".");    
+    }   
+
+
+
+function getRestServicesExample2()
+ {
+	var valuea = document.getElementById("valuea").value;
+	var valueb = document.getElementById("valueb").value;
+	var url = "http://localhost:8080/ecmdemo/rest-ecmdemo/rest/addition/"+valuea+"/"+valueb;   
+
+	var client = new XMLHttpRequest();
+	client.open("GET", url, false);
+
+	client.setRequestHeader("Content-Type", "text/plain");
+
+	client.send(url);
+
+	if (client.status == 200)
+	    alert( client.responseText)
+	else
+	    alert( client.status + " " + client.statusText + ".");    
+}  
+
+function getRestServicesExample3()
+ {
+	var valuea = document.getElementById("valuea3").value;
+	var valueb = document.getElementById("valueb3").value;
+	var url = "http://localhost:8080/ecmdemo/rest-ecmdemo/rest/substraction/"+valuea+"/"+valueb;   
+
+	var client = new XMLHttpRequest();
+	client.open("GET", url, false);
+
+	client.setRequestHeader("Content-Type", "text/plain");
+
+	client.send(url);
+
+	if (client.status == 200)
+	    alert( client.responseText)
+	else
+	    alert( client.status + " " + client.statusText + ".");    
+}
+function getRestServicesExample4()
+ {
+	var valuea = document.getElementById("valuea4").value;
+	var valueb = document.getElementById("valueb4").value;
+	var url = "http://localhost:8080/ecmdemo/rest-ecmdemo/rest/multiplication/"+valuea+"/"+valueb;   
+												 
+	var client = new XMLHttpRequest();
+	client.open("GET", url, false);
+
+	client.setRequestHeader("Content-Type", "text/plain");
+
+	client.send(url);
+
+	if (client.status == 200)
+	    alert( client.responseText)
+	else
+	    alert( client.status + " " + client.statusText + ".");    
+}
+function getRestServicesExample5()
+ {
+	var valuea = document.getElementById("valuea5").value;
+	var valueb = document.getElementById("valueb5").value;
+	var url = "http://localhost:8080/ecmdemo/rest-ecmdemo/rest/division/"+valuea+"/"+valueb;   
+
+	var client = new XMLHttpRequest();
+	client.open("GET", url, false);
+
+	client.setRequestHeader("Content-Type", "text/plain");
+
+	client.send(url);
+
+	if (client.status == 200)
+	    alert( client.responseText)
+	else
+	    alert( client.status + " " + client.statusText + ".");    
+}  
+</script>   
+   
+   <div class="$uicomponent.id">
+       <div style="color: red; font-weight: bold; font-size: 30px;"><%= uicomponent.getText() %></div>
+   
+    A simple call to web service:
+ <br/>
+  <strong>Example 1: Hello world</strong>
+ <button onclick="getRestServicesExample1()">Click</button>  
+ <br/>  
+   <strong>Example 2: addition operation</strong>
+ <input id="valuea" type="text" name="valuea"/> +  <input id="valueb" type="text" name="valueb"/>
+   
+ <button onclick="getRestServicesExample2()">Click</button>
+  <br/>  
+   <strong>Example 3: substraction operation</strong>
+ <input id="valuea3" type="text" name="valuea3"/> +  <input id="valueb3" type="text" name="valueb3"/>
+   
+ <button onclick="getRestServicesExample3()">Click</button>
+  <br/>  
+   <strong>Example 4: multiplication operation</strong>
+ <input id="valuea4" type="text" name="valuea4"/> +  <input id="valueb4" type="text" name="valueb4"/>
+   
+ <button onclick="getRestServicesExample4()">Click</button>
+  <br/>  
+   <strong>Example 5: division operation</strong>
+ <input id="valuea5" type="text" name="valuea5"/> +  <input id="valueb5" type="text" name="valueb5"/>
+   
+ <button onclick="getRestServicesExample5()">Click</button>
+ 
+   </div>
